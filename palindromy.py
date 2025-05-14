@@ -6,3 +6,4 @@ def is_the_word_palindrome(word):
         return False
     
 print(is_the_word_palindrome("wojtek"))
+print(is_the_word_palindrome("anna"))
