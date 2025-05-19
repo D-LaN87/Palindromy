@@ -1,19 +1,17 @@
-def is_the_word_palindrome(word):
+def is_the_word_palindrome(sentence):
+    word = ""
+    for char in sentence:
+        if char.isalnum():
+            word += char.lower()
+    return word == word[::-1]
 
-    if word == word[::-1]:
-        return True
-    else:
-        return False
-    
 """Description of the definition
 
-    Args:
-        word: You put any word you like to check if its palindrome
-
-    if function word == word[::1] checks if word written backwards matches the original word (palindrome)
-      
-    Returns:
-        Boolean: Returns if the word is Palindrome or not (True or False)
+ Code checks if the words you type are palindromes (written from the back are same as written from the start)
+ Method char.isalnum() is responsible for letters and numbers and it ignoress the special signs like @ # etc
+ Method char.lower() is responsible for capital letters and it makes them all lower case. This way it doesn't matter if user types sentence with capital letters or not.
 """ 
 print(is_the_word_palindrome("wojtek"))
-print(is_the_word_palindrome("anna"))
+print(is_the_word_palindrome("Anna"))
+print(is_the_word_palindrome("Mariusz@.13423"))
+print(is_the_word_palindrome("...12Kajak21#@."))
